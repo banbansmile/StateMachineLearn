@@ -23,6 +23,7 @@ public class Job implements EventHandler<JobEvent> {
 
 	public static void main(String[] args) {
 		Job job = new Job();
+		System.out.println("StateMachine当前状态:" + job.stateMachine.getCurrentState());
 		System.out.println("发送事件:" + JobEventType.START);
 		job.handle(new JobEvent(JobEventType.START));
 		System.out.println("StateMachine当前状态:" + job.stateMachine.getCurrentState());
